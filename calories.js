@@ -9,11 +9,14 @@
 ]*/
 
 function calculateCalories() {
+    // Text Inputs
     const mass = document.getElementById('mass-inp').value;
     const height = document.getElementById('height-inp').value;
 
+    // Select
     const caloricFactor = document.getElementById('sport-select').value;
 
+    // Checkboxes
     const romanian = document.getElementById('romanian-check').checked;
     const russian = document.getElementById('russian-check').checked;
 
