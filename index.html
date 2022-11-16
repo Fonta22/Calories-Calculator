@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/VK.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Calories Calculator</title>
+</head>
+<body onload="calculateCalories()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/VK.png" alt="Brand" width="30">
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h2>Calories Calculator</h2>
+        <br>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="padding-right: 25px;">Mass (kg)</td>
+                    <td><input type="number" title="mass" class="form-control" placeholder="Mass" id="mass-inp" value="60" /></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 25px;">Height (cm)</td>
+                    <td><input type="number" title="height" class="form-control" placeholder="Height" id="height-inp" value="180" /></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 25px;">Sport / week</td>
+                    <td>
+                        <select class="form-select" aria-label="Sport Select" id="sport-select">
+                            <option value="1.2">No sport</option>
+                            <option value="1.375" selected>1 to 3 days</option>
+                            <option value="1.55">3 to 5 days</option>
+                            <option value="1.725">6 to 7 days</option>
+                            <option value="1.9">2h per day</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="romanian-check">
+            <label class="form-check-label" for="romanian-check">
+                Romanian
+                <img style="height: 1.5rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/flag-romania_1f1f7-1f1f4.png" alt="">
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="russian-check">
+            <label class="form-check-label" for="russian-check">
+                Russian
+                <img style="height: 1.5rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/flag-russia_1f1f7-1f1fa.png" alt="">
+            </label>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="calculateCalories()">Submit</button>
+        <br>
+        <br>
+        <table class="table table-dark">
+            <tbody>
+                <tr>
+                    <td>Calories for volume</td>
+                    <td><span id="data"></span> cal</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <a href="lang/ru.html">Русский</a>
+        <a href="lang/ca.html">Català</a>
+    </div>
+    <script src="calories.js"></script>
+</body>
+</html>
