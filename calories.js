@@ -17,12 +17,6 @@ function calculateCalories() {
     const romanian = document.getElementById('romanian-check').checked;
     const russian = document.getElementById('russian-check').checked;
 
-    if (caloricFactor === 'false') {
-        document.getElementById('data').innerText = 'Select sport first';
-        document.getElementById('data').style = 'color:red;';
-        return;
-    }
-
     let calories = ((10 * mass) + (6.25 * height) - (5 * 18) + 5) * caloricFactor + 400;
     
     if (romanian) calories = calories * 3;
