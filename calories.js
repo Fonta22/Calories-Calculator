@@ -26,8 +26,16 @@ function calculateCalories() {
 
     if (russian) calories = calories * 4;
 
-    calories = Math.round(calories);
 
-    console.log(calories);
-    document.getElementById('data').innerText = calories;
+    cal = Math.round(calories);
+    kcal = Math.round((calories / 1000) * 10) / 10;
+    kj = Math.round((calories * .004184) * 10) / 10;
+
+    console.log(cal + ' cal');
+    console.log(kcal + ' kcal');
+    console.log(kj + ' KJ');
+
+    document.getElementById('cal').innerText = cal;
+    document.getElementById('kcal').innerText = kcal;
+    document.getElementById('kj').innerText = kj;
 }
